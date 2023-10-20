@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="da">
+<head>
+<title>3. Meld flytningen</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+
+<!-- links til stylesheets: reset, individuelle, header med navigatoin og footer -->
+<link rel="stylesheet" href="css/reset.css">
+<link rel="stylesheet" href="css/stylesa1.css">
+<link rel="stylesheet" href="css/head+foot.css">
+
+<!-- link til Google Fonte (5 i alt: Lora Regular + Mulish Regular + Mulish Bold + Mulish Italic + Sen Semibold) -->
+<link rel="preconnect" href="https://fonts.googleapis.com"> 
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin> 
+<link href="https://fonts.googleapis.com/css2?family=Lora&family=Mulish:ital,wght@0,400;0,700;1,400&family=Sen:wght@600&display=swap" rel="stylesheet">
+
+</head>
+<body>
+
+<!-- MARKUP FOR HEADER MED NAVIGATION: -->
+    <header>
+        <nav class="topnav" id="myTopnav"> <!-- navigationsbaren har id="myTopnav", som det henvises til i JavaScript længere nede -->
+            <div class="logo-container">
+                <a href="index.html" class="logo-blue">AarhusNesting</a>
+            </div>
+
+            <div class="dropdown"> <!-- indeholder både knap og indhold for dropdownmenuen -->
+                <button class="dropbtn">Lær mig at kende</button> <!-- elementet angiver en klikbar knap -->
+                <div class="dropdown-content">  <!-- indeholder alle dropdown links -->
+                    <a href="#">Kom indenfor hos mig</a>
+                    <a href="#">En dag i mit liv</a>
+                    <a href="#">Mine Aarhus-favoritter</a>
+                    <a href="#sociale-medier">Sociale medier</a>
+                </div>
+            </div> 
+
+            <div class="dropdown">
+                <button class="dropbtn">Inspiration</button>
+                <div class="dropdown-content">
+                    <a href="artikel2.html">5 must-haves til studieboligen</a>
+                    <a href="#">Indretningstips til den lille bolig</a>
+                    <a href="#">Hurtige måltider til travle dage</a>
+                    <a href="#">Lækre ideer til madpakken</a>
+                </div>
+            </div> 
+
+            <div class="dropdown">
+                <button class="dropbtn">Ung i Aarhus</button>
+                <div class="dropdown-content">
+                    <a href="#">Udforsk bydelene</a>
+                    <a href="#">Udforsk naturen</a>
+                    <a href="#">Kultur- og storbysliv</a>
+                    <a href="#">Transportmuligheder</a>
+                    <a href="#">Sportsklubber og foreningsliv</a>
+                    <a href="artikel3.html">Byens bedste studiecaféer</a>
+                    <a href="#">Udnyt din studierabat</a>
+                </div>
+            </div> 
+
+            <div class="dropdown">
+                <button class="dropbtn">Adulting 101</button>
+                <div class="dropdown-content">
+                    <a href="#">Budgetplanlægning</a>
+                    <a href="#">Selvstændighed</a>
+                    <a href="#">Trivsel</a>
+                    <a href="#">Rengøring og tøjvask</a>
+                    <a href="#">Affaldssortering</a>
+                    <a href="#">Madopbevaring</a>
+                </div>
+            </div>
+
+            <div class="dropdown">
+                <button class="dropbtn">Flytteproces a-z</button>
+                <div class="dropdown-content">
+                    <a href="#">1. Find bolig i Aarhus</a>
+                    <a href="#">2. Indkøbs-huskeliste</a>
+                    <a href="artikel1.html">3. Meld flytningen</a>
+                    <a href="#">4. Tilmeld forbrug + internet</a>
+                    <a href="#">5. Tegn forsikringer</a>
+                    <a href="#">6. Tjek boligen efter</a>
+                    <a href="#">7. Søg boligstøtte</a>
+                </div>
+            </div>
+            <a href="javascript:void(0);" class="icon" onclick="myFunction()">=</a> <!-- anker-link som fortæller, at når man klikker på "=" på skærmen, gælder JavaScript-reglerne for "myFunction" -->
+        </nav>
+    </header>
+<!-- MARKUP HEADER SLUT -->
+    
+<!-- MARKUP FOR MAIN -->
+    <main>
+        <article class="content-container">
+            <h2>Hvem skal vide, at du flytter?</h2> <!-- her kommer en overskrift -->
+            <p>Når du har underskrevet kontrakten til din nye bolig, er et godt sted at gribe selve flytteprocessen an, ved at gøre det officielt, at du skifter adresse.</p>
+                
+            <p>At registrere din flytning er en af de vigtigste opgaver, du skal huske i forbindelse med din flytning, men heldigvis også noget som kan klares hurtigt og elektronisk. Herunder finder du en samlet oversigt over, hvem du skal huske at give besked om din nye adresse.</p>
+                
+            <h6>Folkeregisteret i din kommende kommune</h6> <!-- her kommer en underoverskrift -->
+            <p>Det er lovpligtigt at oplyse din nye adresse til Folkeregisteret i den kommune, du flytter til. På den måde bliver du registeret som indbygger i din nye kommune, så du bl.a. kan gå til valg og få hjælp hos borgerservice, hvis du får brug for det.</p>
+                
+            <p>Det er en god ide at melde flytningen i god tid, allerede inden du overtager den nye bolig, da adresseændringen sjældent træder i kraft med det samme. Så det er helt normalt, hvis du oplever lidt ventetid.</p>
+                
+            <p>Når du angiver flyttedatoen, skal du vælge den dag, du begynder at bo på adressen – dvs. flytter dine ting og sover i boligen. Det kan eksempelvis være den dato, du overtager nøglerne. Folkeregisteret opdaterer tidligst din adresse på den dato, du har oplyst som din flyttedato.</p>
+            <ul class="unordered-list"> <!-- her kommer en punktliste med 5 list items -->
+                <li>OBS: Skift adresse op til 4 uger før og senest 5 dage efter flytningen</li>
+                <li id="no-margin">Brug den digitale selvbetjening på <a target="_blank" href="https://www.borger.dk/bolig-og-flytning/flytning_oversigt">www.borger.dk</a></li>
+                <li id="no-bullet">Det er en fordel at have MitID, din nuværende adresse, nye adresse og CPR-nummer klar, og samtidig overveje om du vil skifte læge. Læs mere om hvornår, du skal skifte læge, og hvordan, du gør, lige <a target="_blank" href="https://www.sundhed.dk/borger/patientrettigheder/sygesikring-og-laegevalg/valg-af-laege/">her</a></li>
+                <li>Du modtager en kvittering i din E-Boks, så snart du har færdiggjort registreringen på borger.dk</li>
+                <li>Du modtager automatisk et nyt fysisk sygesikringskort (det gule) i din nye postkasse senest 14 dage efter, at Folkeregisteret har registreret din flytning</li>
+            </ul>
+                
+            <h6>Din bank</h6>  <!-- her kommer en underoverskrift -->
+            <p>Selvom kommunikation generelt bliver mere og mere elektronisk, er fysiske breve ikke helt udfaset endnu, og da banken stadig sender regninger, nye betalingskort og andre vigtige dokumenter til din registrerede adresse, er det vigtigt at holde den opdateret, så du ikke går glip af vigtige information.</p>
+                
+            <ul class="unordered-list"> <!-- her kommer en punktliste med 2 list items -->
+                <li>Ring til kundeservice, henvend dig fysisk eller brug bankens digitale selvbetjenings-service</li>
+                <li>Der er ingen tidsfrist, som skal overholdes, men jo før, jo bedre! F.eks. når du også registrerer din flytning på borger.dk. Så glemmer du det ikke igen og kan vinge endnu en ting af på tjeklisten!</li>
+            </ul>
+                
+            <h6>Din tandlæge</h6> <!-- her kommer en underoverskrift -->
+            <p>For mange giver det god mening - i første omgang i hvert fald - at beholde samme tandlæge, man har som hjemmeboende. Ofte behøver man kun at møde op hos tandlægen til et årligt tjek, som måske kan koordineres med et besøg hjem.<br>Hvis du fortsætter hos din nuværende tandlæge, skal du bare lige huske at fortælle dem, at du skifter adresse, så de fortsat kan sende nødvendig post til dig.</p>
+                
+            <ul class="unordered-list"> <!-- her kommer en punktliste med 3 list items -->
+                <li>Kontakt din tandlæge ved at ringe til receptionen eller sende en e-mail. Du kan også møde fysisk op i klinikken</li>
+                <li>Ønsker du at skifte til en tandlæge tættere på dit nye hjem, kan du læse mere om, hvordan du gør lige <a target="_blank" href="https://www.borger.dk/sundhed-og-sygdom/sygesikring-og-laegevalg/Tandlaeger">her</a></li>
+                <li>OBS: Beholder du samme lægehus, skal du også fortælle receptionen her, at din adresse er blevet ændret</li>
+            </ul>
+                
+            <h6>Din arbejdsgiver</h6> <!-- her kommer en underoverskrift -->
+            <p>Har du mulighed for at fortsætte med dit tidligere job, selvom du flytter, skal din arbejdsgiver også have besked om, at du skifter adresse, så din arbejdsplads har de korrekte oplysninger om dig. Det kan gøres skriftligt eller bare mundtligt.</p>
+                
+            <h6>Dine forsikringsselskaber</h6> <!-- her kommer en underoverskrift -->
+            <p>De fleste forsikringsselskaber får automatisk besked om, at du har skiftet adresse, men det gælder desværre ikke dem allesammen. Så hvis du i forvejen har forsikringsaftaler hos et selskab, er det en god idé at tjekke op på, om du selv skal ændre din adresse, f.eks. ved at ringe eller besøge deres hjemmeside.</p>
+            
+            <p>Måske er det ikke kun din adresse, du skal have ændret hos dine forsikringsselskaber, men også de aftaler, som du har med dem. Bliv guidet til forsikringer, så du bliver dækket bedst muligt i din nye livssituation lige <a target="_blank" href="index.html">her</a></p>
+                
+            <h6>Husk også</h6> <!-- her kommer en underoverskrift -->
+            <ul class="unordered-list"> <!-- her kommer en punktliste med 2 list items -->
+                <li>At rette din adresse steder, hvor du har abonnementer og/eller en bruger (alt fra fitness centre til streamingtjenester) og foreninger, du er medlem af</li>
+                <li>At sætte dit navn på din nye postkasse - så snart du har mulighed for det</li>
+            </ul>
+            <p>Når du har registreret din flytning hos borger.dk og andre nødvendige steder, er du klar til at hoppe videre til næste <a target="_blank" href="index.html">trin på tjeklisten</a>, hvor du får vejledning til, hvor og hvordan du tilmelder vand, varme, el og internet.</p>
+        </article>
+    </main>
+<!-- MARKUP MAIN SLUT -->
+    
+<!-- MARKUP FOR FOOTER -->
+    <footer id="sociale-medier"> <!-- jeg bruger et id, der fungerer som et bogmærke til menupunktet "Sociale Medier" -->
+        <article class="footer-content">
+            <a href="index.html" class="logo-beige">AarhusNesting</a>
+        </article>
+    </footer>
+<!-- MARKUP FOOTER SLUT -->
+
+<!-- JavaScript, som gør min dropdown-menu i stand til at blive til en burgermenu. 
+    "var" henter mit <nav>-element, som har fået id="myTopnav og gemmer det i x"
+    "if" forklarer, hvilken CSS, der gælder for "x" med id="myTopnav". 
+    Når "myFunction" udføres, ændrer CSS-class for et HTML-element med id "myTopnav" fra "topnav" til "topnav responsive" (så skal CSS for topnav.responsive gælde) og omvendt (så skal CSS for "topnav" gælde) -->
+    <script>
+        function myFunction() { 
+            var x = document.getElementById("myTopnav");
+            if (x.className === "topnav") {
+                x.className += " responsive";
+            } else {
+                x.className = "topnav";
+            }
+        }
+    </script>
+</body>
+</html>

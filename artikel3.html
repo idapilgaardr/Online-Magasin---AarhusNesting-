@@ -1,0 +1,224 @@
+<!DOCTYPE html>
+<html lang="da">
+<head>
+<title>Byens bedste studiecaféer</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+
+<!-- links til stylesheets: reset, individuelle, header med navigatoin og footer -->
+<link rel="stylesheet" href="css/reset.css">
+<link rel="stylesheet" href="css/stylesa3.css">
+<link rel="stylesheet" href="css/head+foot.css">
+
+<!-- link til Google Fonte (5 i alt: Lora Regular + Mulish Regular + Mulish Bold + Mulish Italic + Sen Semibold) -->
+<link rel="preconnect" href="https://fonts.googleapis.com"> 
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin> 
+<link href="https://fonts.googleapis.com/css2?family=Lora&family=Mulish:ital,wght@0,400;0,700;1,400&family=Sen:wght@600&display=swap" rel="stylesheet">
+
+</head>
+<body>
+
+<!-- MARKUP FOR HEADER MED NAVIGATION: -->
+    <header>
+        <nav class="topnav" id="myTopnav"> <!-- navigationsbaren har id="myTopnav", som det henvises til i JavaScript længere nede -->
+            <div class="logo-container">
+                <a href="index.html" class="logo-blue">AarhusNesting</a>
+            </div>
+
+            <div class="dropdown"> <!-- indeholder både knap og indhold for dropdownmenuen -->
+                <button class="dropbtn">Lær mig at kende</button> <!-- elementet angiver en klikbar knap -->
+                <div class="dropdown-content">  <!-- indeholder alle dropdown links -->
+                    <a href="#">Kom indenfor hos mig</a>
+                    <a href="#">En dag i mit liv</a>
+                    <a href="#">Mine Aarhus-favoritter</a>
+                    <a href="#sociale-medier">Sociale medier</a>
+                </div>
+            </div> 
+
+            <div class="dropdown">
+                <button class="dropbtn">Inspiration</button>
+                <div class="dropdown-content">
+                    <a href="artikel2.html">5 must-haves til studieboligen</a>
+                    <a href="#">Indretningstips til den lille bolig</a>
+                    <a href="#">Hurtige måltider til travle dage</a>
+                    <a href="#">Lækre ideer til madpakken</a>
+                </div>
+            </div> 
+
+            <div class="dropdown">
+                <button class="dropbtn">Ung i Aarhus</button>
+                <div class="dropdown-content">
+                    <a href="#">Udforsk bydelene</a>
+                    <a href="#">Udforsk naturen</a>
+                    <a href="#">Kultur- og storbysliv</a>
+                    <a href="#">Transportmuligheder</a>
+                    <a href="#">Sportsklubber og foreningsliv</a>
+                    <a href="artikel3.html">Byens bedste studiecaféer</a>
+                    <a href="#">Udnyt din studierabat</a>
+                </div>
+            </div> 
+
+            <div class="dropdown">
+                <button class="dropbtn">Adulting 101</button>
+                <div class="dropdown-content">
+                    <a href="#">Budgetplanlægning</a>
+                    <a href="#">Selvstændighed</a>
+                    <a href="#">Trivsel</a>
+                    <a href="#">Rengøring og tøjvask</a>
+                    <a href="#">Affaldssortering</a>
+                    <a href="#">Madopbevaring</a>
+                </div>
+            </div>
+
+            <div class="dropdown">
+                <button class="dropbtn">Flytteproces a-z</button>
+                <div class="dropdown-content">
+                    <a href="#">1. Find bolig i Aarhus</a>
+                    <a href="#">2. Indkøbs-huskeliste</a>
+                    <a href="artikel1.html">3. Meld flytningen</a>
+                    <a href="#">4. Tilmeld forbrug + internet</a>
+                    <a href="#">5. Tegn forsikringer</a>
+                    <a href="#">6. Tjek boligen efter</a>
+                    <a href="#">7. Søg boligstøtte</a>
+                </div>
+            </div> 
+            <a href="javascript:void(0);" class="icon" onclick="myFunction()">=</a> <!-- anker-link som fortæller, at når man klikker på "=" på skærmen, gælder JavaScript-reglerne for "myFunction" -->
+        </nav>
+    </header>
+<!-- MARKUP HEADER SLUT -->
+
+<!-- MARKUP FOR MAIN -->
+    <main>
+        <article class="content-container">
+            <h2>En guide til Aarhus' bedste studiecaféer</h2>
+            
+            <img class="wide-img" src="images/LYN1.png" alt="billede af LYNfabrikkens indgang"> <!-- her kommer et billede under overskriften -->
+
+            <p>Du kan roligt glæde dig til at bruge vigtige år af dit liv som studerende i Aarhus. Byen har mere end 50.000 studerende og tilbyder derfor masser af muligheder for dig, der skal i gang med at læse – det gælder blandt andet et stort udvalg af biblioteker, caféer og læsesale, hvor du kan finde dig til rette og få mest muligt ud af din selvstudie- og forberedelsestid.</p>
+
+            <p>Jeg har sammensat en lille guide til mine favoritlæsesteder her i Aarhus, hvor jeg elsker at mødes med en studiegruppe eller sidde alene og fordybe mig. Bonus: alle tre steder på listen har gratis adgang.</p>
+
+            <h6>Dokk1 (”Dokken” på aarhusiansk) - Hack Kampmanns Plads 2, 8000 Aarhus C</h6>
+            <p>Første stop på listen er nok også den mest kendte af dem alle, nemlig Dokk1 – et kulturhus ved Aarhus Havn med udsigt over vandet og Aarhus Ø. Her finder du ud over store læseområder med masser af studiepladser også borgerservice, bibliotek og DR Sporten for bare at nævne få. Generelt er Dokk1 et sted, du gerne vil kende som kommende aarhusianer.</p>
+            
+            <section class="responsive-images"> <!-- her kommer en sektion med to billeder -->
+                <div class="img-container">
+                    <div>
+                        <img src="images/dokk1.png" alt="billede af Dokk1 udefra">
+                    </div>
+                    <div>
+                        <img src="images/dokk2.png" alt="billede af Dokk1 indefra">
+                    </div>
+                </div>
+            </section>
+
+            <p>3 hurtige om Dokk1</p>
+
+            <ol class="ordered-list"> <!-- her kommer en nummereret liste med 3 list items -->
+                <li>Gratis wifi og strømstik ved siddepladserne</li>
+                <li>Højt til loftet og rummeligt med mulighed for at sidde ved skriveborde og højborde og slænge sig i loungestole eller sofaer</li>
+                <li>Mulighed for at medbringe madpakke eller købe i caféen i stueetagen</li>
+            </ol>
+
+            <p>Besøg Dokk1’s egen hjemmeside <a target="_blank" href="https://www.dokk1.dk">www.dokk1.dk</a> og læs mere eller følg med på instagram: @dokk1aarhus</p>
+
+            <h6>Dome of Visions eller Domen – Inge Lehmanns Gade 22, Pier 2, 8000 Aarhus C</h6>
+            <p>Kun et stenkast fra Dokk1 får du samme beroligende vandudsigt, men en helt anden atmosfære. Domen er et kuppelformet drivhus indrettet med grønne planter, masser af træ og indbydende siddepladser, hvor du har mulighed for at kombinere arbejde med et afbræk fra det pulserende byliv.</p>
+        
+            <p>Et lille obs - Domen bliver også brugt til kulturelle arrangementer, alt fra Lindy Hop til plante croquis. Og selvom den gode stemning er i top, ville jeg nok vælge en anden studiecafé at slå mig ned på lige de dage.</p>
+
+            <p>Domen har desværre ingen hjemmeside, men på deres instagram er det nemt at følge med i deres månedlige aktiviteter – måske der også er noget for dig.</p>
+
+            <section class="responsive-images"> <!-- her kommer en sektion med to billeder -->
+                <div class="img-container-domentop">
+                    <div>
+                        <img src="images/Dome1.png" alt="billede af Domen udefra">
+                    </div>
+                    <div>
+                        <img src="images/Dome2.png" alt="billede af Domen indefra">
+                    </div>
+                </div>
+            </section>
+
+            <p>Ikke desto mindre får du her 3 hurtige om Domen</p>
+
+            <ol class="ordered-list"> <!-- her kommer en nummereret liste med 3 list items -->
+                <li>Gratis wifi og mulighed for at få strømforsygning</li>
+                <li>Altid lyst og dejlig varmt</li>
+                <li>I den tilhørende non-profit café kan du købe billig (meget billig) økologisk kaffe og snacks, samtidig med at du støtter godtgørende formål og Aarhus medborgerskab</li>
+            </ol>
+
+            <section class="responsive-images"> <!-- her kommer en sektion med to billeder -->
+                <div class="img-container-domenbund">
+                    <div>
+                        <img src="images/Dome3.png" alt="billede af Domen indefra">
+                    </div>
+                    <div>
+                        <img src="images/Dome4.png" alt="billede af Domen indefra">
+                    </div>
+                </div>
+            </section>
+
+            <h6>LYNfabrikken - Vestergade 49b, 8000 Aarhus C</h6>
+            <p>Hvis du søger noget lidt mindre og mere urbant, er LYNfabrikken det rigtige for dig. På øverste etage i en gammel fabriksbygning finder du en kaffe- og vinbar indrettet med langborde og store industrielle vinduespartier – lysindfaldet er skønt!</p>
+            
+            <p>Indgangen til LYNfabrikken ligger i en baggård til Vestergade, og tro det eller ej, men mere skulle der ikke til, før at jeg gik lidt forvirret rundt, første gang jeg besøgte baren... Men fortvivl ikke - jeg bliver utrolig nemt stedsforvirret, og med Google Maps og caféens egne farvestrålende vejvisningsskilte, er jeg ikke i tvivl om, at du finder hurtigt frem. Så tør jeg godt love, at det er den mulige forvirring værd. </p>
+
+            <img class="wide-img" src="images/LYN2.png" alt="billede af LYNfabrikken indefra"> <!-- her kommer et billede mellem to tekstafsnit -->
+
+            <p>Udover servering ved bordene og ”good vibes only”, bliver du fra LYNfarbrikkens tagterrasse også forkælet med den mest charmerende udsigt over tagene i Aarhus Centrum og til kunstmuseet Aros´ ikoniske regnbue. Det er lidt af en grøn oase oppe på taget, der naturligvis også er indrettet med siddepladser og samme musik som indenfor, til både læsning og hygge.</p>
+        
+            <section class="responsive-images"> <!-- her kommer en sektion med to billeder -->
+                <div class="img-container-lynfabrikken">
+                    <div>
+                        <img src="images/LYN3.png" alt="billede af Aros set fra LYNfabrikken">
+                    </div>
+                    <div>
+                        <img src="images/LYN4.png" alt="billede af udsigten fra LYNfabrikken">
+                    </div>
+                </div>
+            </section>
+            
+            <p>Du gættede det! Her er 3 hurtigt om LYNfabrikken</p>
+
+            <ol class="ordered-list"> <!-- her kommer en nummereret liste med 3 list items -->
+                <li>Gratis internet og de obligatoriske stikdåser – de hænger endda ned fra loftet</li>
+                <li>Indrettet med fokus på at skabe et læsevenligt miljø – her er bordene brede</li>
+                <li>Stort udvalg af kolde som varme drikke og lette måltider</li>
+            </ol>
+        
+            <p>Find mere på LYNfabrikkens egen kanaler her: <a target="_blank" href="https://www.lynfabrikken.dk">www.lynfabrikken.dk</a> og @lynfabrikken</p>
+
+            <p>Selvom det uden tvivl er lettere sagt end gjort, er det en sund vane at sætte rammer for, hvornår du studerer, og hvornår du holder fri. Tro mig, den balance er jeg stadig ved at læ-re, men jeg har erfaret at bare det, at komme ud af lejligheden og sætte en slags ”arbejdsstation” op i nye omgivelser, hjælper på både min koncentration og motivation.</p>
+
+            <p>Studiecaféerne, jeg har introduceret dig til ovenfor, udgør kun et lille håndpluk af de mange caféer, læsesale, biblioteker, you name it, i Aarhus, som egner sig supergodt til lektielæsning, projektarbejde og meget mere.</p>
+        </article>
+    </main>
+<!-- MARKUP MAIN SLUT -->
+
+<!-- MARKUP FOR FOOTER -->
+    <footer id="sociale-medier"> <!-- jeg bruger et id, der fungerer som et bogmærke til menupunktet "Sociale Medier" -->
+        <article class="footer-content">
+            <a href="index.html" class="logo-beige">AarhusNesting</a>
+        </article>
+    </footer>
+<!-- MARKUP FOOTER SLUT -->
+
+<!-- JavaScript, som gør min dropdown-menu i stand til at blive til en burgermenu. 
+    "var" henter mit <nav>-element, som har fået id="myTopnav og gemmer det i x"
+    "if" forklarer, hvilken CSS, der gælder for "x" med id="myTopnav". 
+    Når "myFunction" udføres, ændrer CSS-class for et HTML-element med id "myTopnav" fra "topnav" til "topnav responsive" (så skal CSS for topnav.responsive gælde) og omvendt (så skal CSS for "topnav" gælde) -->
+    <script>
+        function myFunction() { 
+            var x = document.getElementById("myTopnav");
+            if (x.className === "topnav") {
+                x.className += " responsive";
+            } else {
+                x.className = "topnav";
+            }
+        }
+    </script>
+</body>
+</html>
+
+    

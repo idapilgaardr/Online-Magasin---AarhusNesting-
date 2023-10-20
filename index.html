@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html lang="da">
+<head>
+<title>AarhusNesting</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+
+<!-- links til stylesheets: reset, individuelle, header med navigatoin og footer -->
+<link rel="stylesheet" href="css/reset.css">
+<link rel="stylesheet" href="css/styles.css">
+<link rel="stylesheet" href="css/head+foot.css">
+
+
+<!-- link til Google Fonte (5 i alt: Lora Regular + Mulish Regular + Mulish Bold + Mulish Italic + Sen Semibold) -->
+<link rel="preconnect" href="https://fonts.googleapis.com"> 
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin> 
+<link href="https://fonts.googleapis.com/css2?family=Lora&family=Mulish:ital,wght@0,400;0,700;1,400&family=Sen:wght@600&display=swap" rel="stylesheet">
+
+</head>
+<body>
+
+<!-- MARKUP FOR MIN HEADER MED NAVIGATION: -->
+    <header>
+        <nav class="topnav" id="myTopnav"> <!-- navigationsbaren har id="myTopnav", som det henvises til i JavaScript længere nede -->
+            <div class="logo-container">
+                <a href="index.html" class="logo-blue">AarhusNesting</a>
+            </div>
+
+            <div class="dropdown"> <!-- indeholder både knap og indhold for dropdownmenuen -->
+                <button class="dropbtn">Lær mig at kende</button> <!-- elementet angiver en klikbar knap -->
+                <div class="dropdown-content">  <!-- indeholder alle dropdown links -->
+                    <a href="#">Kom indenfor hos mig</a>
+                    <a href="#">En dag i mit liv</a>
+                    <a href="#">Mine Aarhus-favoritter</a>
+                    <a href="#sociale-medier">Sociale medier</a>
+                </div>
+            </div> 
+
+            <div class="dropdown">
+                <button class="dropbtn">Inspiration</button>
+                <div class="dropdown-content">
+                    <a href="artikel2.html">5 must-haves til studieboligen</a>
+                    <a href="#">Indretningstips til den lille bolig</a>
+                    <a href="#">Hurtige måltider til travle dage</a>
+                    <a href="#">Lækre ideer til madpakken</a>
+                </div>
+            </div> 
+
+            <div class="dropdown">
+                <button class="dropbtn">Ung i Aarhus</button>
+                <div class="dropdown-content">
+                    <a href="#">Udforsk bydelene</a>
+                    <a href="#">Udforsk naturen</a>
+                    <a href="#">Kultur- og storbysliv</a>
+                    <a href="#">Transportmuligheder</a>
+                    <a href="#">Sportsklubber og foreningsliv</a>
+                    <a href="artikel3.html">Byens bedste studiecaféer</a>
+                    <a href="#">Udnyt din studierabat</a>
+                </div>
+            </div> 
+
+            <div class="dropdown">
+                <button class="dropbtn">Adulting 101</button>
+                <div class="dropdown-content">
+                    <a href="#">Budgetplanlægning</a>
+                    <a href="#">Selvstændighed</a>
+                    <a href="#">Trivsel</a>
+                    <a href="#">Rengøring og tøjvask</a>
+                    <a href="#">Affaldssortering</a>
+                    <a href="#">Madopbevaring</a>
+                </div>
+            </div>
+
+            <div class="dropdown">
+                <button class="dropbtn">Flytteproces a-z</button>
+                <div class="dropdown-content">
+                    <a href="#">1. Find bolig i Aarhus</a>
+                    <a href="#">2. Indkøbs-huskeliste</a>
+                    <a href="artikel1.html">3. Meld flytningen</a>
+                    <a href="#">4. Tilmeld forbrug + internet</a>
+                    <a href="#">5. Tegn forsikringer</a>
+                    <a href="#">6. Tjek boligen efter</a>
+                    <a href="#">7. Søg boligstøtte</a>
+                </div>
+            </div>
+            <a href="javascript:void(0);" class="icon" onclick="myFunction()">=</a> <!-- anker-link som fortæller, at når man klikker på "=" på skærmen, gælder JavaScript-reglerne for "myFunction" -->
+        </nav>
+    </header>
+<!-- MARKUP HEADER SLUT -->
+
+<!-- MARKUP FOR MAIN -->
+    <main>
+        <hero> 
+            <img src="images/skyline.png" alt="Aarhus skyline"> <!-- baggrundsbillede som fylder hele forsiden ud, men ligger bag de øvrige elementer -->
+        </hero> 
+
+        <!-- markup for første del af forsiden med billede og titel -->
+        <article class="viewport1"> 
+            <section class="viewport1_content">
+                <section class="left"> <!-- container som omkranser alle elementerne i venstre side af "viewport1-content" -->
+                    <img src="images/flyttekasser.png" alt="billede af flyttekasser">
+                </section>
+
+                <section class="right"> <!-- container som omkranser alle elementerne i højre side af "viewport1-content" -->
+                    <h1>Din hjælp til at<br>flyve godt<br>fra reden<br>og lande sikkert<br>i Aarhus</h1>
+                    <p>...lad os tage på rejsen sammen</p>
+                </section>
+            </section>
+        </article>
+
+          <!-- markup for anden del af forsiden med introducerende tekst -->
+        <article class="viewport2">
+            <section class="viewport2_content"> 
+                <h2>Info og inspo samlet ét sted</h2>
+                <p>SPOILET ALERT! At flytte hjemmefra for første gang betyder som regel en kæmpe forandring af hverdagen. Min egen erfaring har lært mig, at det både kan være befriende og spændende, men også stressende og følelsesmæssigt krævende... og til tider svært at stå i alene.</p>
+                <br>
+                <p>Mit navn er Ida og som udeboende og studerende i Aarhus byder jeg velkommen til AarhusNesting - et univers af skræddersyet vejledning til dig, som flytter ud for første gang, og hjælp til at håndtere de udfordringer, det kommer med.</p>
+                <br>
+                <p>Og så giver jeg ideer til din madlavning, indretning og dit studieliv i Smilets by. Så uanset om du søger råd, inspiration eller blot en relaterbar historie om livsændringer, håber jeg, du finder det her.</p>
+
+                <section class="btn-container"> <!-- container som indeholder en knap -->
+                    <a href="index.html" class="button">Hent min gratis trin for trin-tjekliste</a> 
+                </section>
+            </section>
+        </article>
+
+        <!-- markup for tredje del af forsiden med links til to artikler -->
+        <article class="viewport3">
+            <h3>Læs mine seneste opslag her</h3> <!-- <h3> og <section class="viewport3_content"> er begge to items i container <article class="viewport3"> -->
+
+            <section class="viewport3_content"> <!-- her starten en container -->
+                <section class="column">  <!-- her er det ene item -->
+                    <section class="img-container">
+                        <a target="_blank" href="musthaves.html"><img src="images/musthaves.png" alt="boligtilbehør"></a>
+                    </section>
+
+                    <section class="btn-container"> <!-- med class="btn-container bruger disse knapper samme styling som knappen længere oppe -->
+                        <a href="musthaves.html" class="button">5 must-haves til studieboligen</a>
+                    </section>
+                </section>
+            
+                <section class="column"> <!-- her er det andet item -->
+                    <div class="img-container">
+                        <a target="_blank" href="studiecafe.html"><img src="images/LYN1.png" alt="lynfabrikken"></a>
+                    </div>
+                    <div class="btn-container">
+                        <a href="studiecafe.html" class="button">En guide til de bedste studiecaféer</a>
+                    </div>
+                </section>
+            </section>
+        </article>
+
+        <!-- markup for sidste del af forsiden med lidt tekst -->
+        <article class="viewport4">
+            <section class="viewport4_content">
+                <p>Glem ik' at de erfaringer, du gør dig og oplevelser, du samler, mens du navigerer gennem livet som udeboende, er guld værd! Så tag chancer og vær ikke bange for at lave fejl undervejs. Det hele løser sig i sidste ende:)</p>
+            </section>
+        </article>
+    </main>
+<!-- MARKUP MAIN SLUT -->
+    
+<!-- MARKUP FOR FOOTER -->
+    <footer id="sociale-medier"> <!-- jeg bruger et id, der fungerer som et bogmærke til menupunktet "Sociale Medier" -->
+        <article class="footer-content">
+            <a href="index.html" class="logo-beige">AarhusNesting</a> 
+        </article>
+    </footer>
+<!-- MARKUP FOR FOOTER -->
+    
+
+<!-- JavaScript, som gør min dropdown-menu i stand til at blive til en burgermenu. 
+    "var" henter mit <nav>-element, som har fået id="myTopnav og gemmer det i x"
+    "if" forklarer, hvilken CSS, der gælder for "x" med id="myTopnav".
+    Når "myFunction" udføres, ændrer CSS-class for et HTML-element med id "myTopnav" fra "topnav" til "topnav responsive" (så skal CSS for topnav.responsive gælde) og omvendt (så skal CSS for "topnav" gælde) -->
+    <script>
+        function myFunction() { 
+            var x = document.getElementById("myTopnav");
+            if (x.className === "topnav") {
+                x.className += " responsive";
+            } else {
+                x.className = "topnav";
+            }
+        }
+    </script>
+</body>
+</html>
