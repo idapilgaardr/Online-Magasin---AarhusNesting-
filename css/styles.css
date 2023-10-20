@@ -1,1 +1,216 @@
 
+body {
+    background-color: #f4f1e8;
+    margin-top: 20px;
+}
+
+/*STYLEREGLER FOR MAIN*/
+
+/* styleregler for baggrundsbillede/-tegning */
+hero { 
+    display: flex; /* det skal være flexibelt */
+}
+
+hero img {
+    position: fixed; /* baggrundsbilledet/-tegningen skal følge med, når man scroller ned af siden */
+    top: 0; /* det skal være placeret i øverste venstre hjørne og fylde hele skærmen ud */
+    left: 0;
+    width: 100%;
+    height: auto; /* højden skal automatisk tilpasse sig billedets bredde */
+    z-index: -10; /* baggrundsbilledet skal ligge bag alle de øvrige elementer */
+    opacity: 25%; /* baggrundsbilledet/-tegningen skal ikke være så tydelig */
+}
+
+/* styleregler for første del af forsiden med billede og titel */
+.viewport1 {
+    display: flex; /* viewport1 og de tilhørende elementer bliver flexible */
+    align-items: center; /* alle elementer i viewport1 skal centreres lodret */
+    justify-content: center; /* alle elementer i viewport1 skal centreres vandret*/
+    width: 100%;
+    margin-top: 180px; /* har fået 20px ekstra margin i topppen, fordi hero-billedet bliver skubbet 20px ned pga. body's margin */
+    text-align: left;
+}
+
+.viewport1_content {
+    display: flex; 
+    justify-content: center;
+    align-items: center;
+}
+
+.viewport1_content .left img {
+    width: 350px; /* billedet skal være 350px i bredden */
+    height: auto; /* højden skal tilpasse sig automatisk */
+}
+
+.viewport1_content .right {
+    text-align: left; /* titlen på forsiden skal venstre-justeres */
+    margin-left: 50px; /* der skal være lidt luft mellem tekst og billede */
+    color: #598ca6;
+}
+
+.right h1 {
+    font-family: 'Lora', serif; /* titlen skal have skrifttypen Lora */
+    font-size: 3.5em;
+    padding-top: 90px; /* containeren har fået lidt ekstra padding, teksten er på linje med billedet i bunden */
+    letter-spacing: 0.05px;
+}
+
+.right p {
+    font-family: 'Mulish', sans-serif; /* den lille tekst under titlen skal have skrifttypen Mulish */
+    margin-top: 60px;
+}
+
+/* styleregler for anden del af forsiden med introducerende tekst */
+.viewport2 {
+    display: flex; 
+    align-items: center; /* sørger for at alt indholdet fylder 60% i midten af skærmen lodret */
+    justify-content: center; /* sørger for at alt indholdet fylder 60% i midten af skærmen vandret */
+    width: 100%; 
+    margin-top: 160px;
+}
+
+.viewport2_content {
+    width: 60%; /* indholder i viewport2 skal fylde 60% i midten af skærmen */
+    text-align: center;
+}
+
+.viewport2 h2 {
+    font-family: 'Lora', serif;
+    font-size: 4em;
+    color: #598ca6;
+    padding-bottom: 20px;
+}
+
+.viewport2 p {
+    font-family: 'Mulish', sans-serif;
+    text-align: center;
+    margin-top: 40px; /* sørger for luft mellem tekst afsnittene */
+    line-height: 2em;
+    color: #282628;
+}
+
+.btn-container {
+    display: flex;
+    justify-content: center; /* sørger for at knappens tekst sidder lige i midten */
+    align-items: center;
+    margin-top: 60px; /* giver luft over knappen */
+    width: 100%; 
+}
+  
+.button {
+    display: block; 
+    font-family: 'Lora', serif;
+    color: #f4f1e8;
+    text-decoration: none;
+    background-color: #598ca6;
+    border: none;
+    border-radius: 40px; /* giver knapperne en rund kant */
+    padding: 15px 32px; /* giver luft rundt om teksten inde i knapperne og bestemmer derfor størrelsen af efter tekstlængden */
+}
+
+/* style-regler for knapperne, når man hover hen over */
+.button:hover { /* der kommer en border og farvene på baggrund og tekst byttes om */
+    background-color: #f4f1e8;
+    color: #598ca6; 
+    border: 2px solid #598ca6;
+}
+
+/* styleregler for anden del af forsiden med links til to artikler */
+.viewport3 {
+    display: flex;
+    flex-direction: column; /* sørger for at indholdet bliver stablet oven på hinanden */
+    justify-content: center; /* Centrer indholdet vandret og lodret */
+    align-items: center;
+    margin-top: 160px;
+    width: 100%;
+}
+
+.viewport3 h3 {
+    font-family: 'Lora', serif;
+    font-size: 4em; /* linjehøjden skal være 4 gange større end standarden for h3 */
+    color: #598ca6;
+    text-align: center;
+    width: 60%;
+}
+
+.viewport3_content {
+    display: flex;
+    flex-direction: row; /* sørger for at de to section class="column" lægger vandret ved siden af hinanden inde i deres container */
+    align-items: center; 
+    justify-content: space-between; /* sørger for at der er luft imellem de to "column" med et billed og en knap i hver */
+    width: 60%; /* de to kolonner skal tilsammen fylde 60% af skærmen */
+    flex-wrap: wrap; 
+}
+  
+.column {
+    margin-top: 60px; /* sørger for luft mellem overskrift og billeder */
+}
+
+.img-container {
+    display: flex; 
+    align-items: center; /* sørger for at alle img.container fylder 60% i midten af skærmen lodret */
+    justify-content: center; /* sørger for at alle img.container fylder 60% i midten af skærmen vandret */
+    width: 100%; /* billederne skal tilsammen fylde 100% af "viewport3-content" containeren */
+}
+  
+.img-container img {
+    width: auto; /* bredden skal tilpasse sig automatisk, så billedet forbliver i de rigtige proportioner */
+    max-height: 290px; /* billeder skal være lige høje og max 290px, for at der kan være luft imellem dem */
+}
+
+/* styleregler for sidste del af forsiden med lidt tekst */
+.viewport4 {
+    display: flex;
+    justify-content: center; /* Centrer indholdet vandret og lodret */
+    align-items: center;
+    width: 100%;
+    margin-top: 160px;
+    margin-bottom: 160px; /* sørger for luft under teksten ned til footer */
+}
+
+.viewport4_content {
+    display: flex;
+    justify-content: center; /* Centrer indholdet vandret og lodret */
+    align-items: center;
+    width: 60%;
+    text-align: center;
+}
+
+.viewport4 p {
+    font-family: 'Mulish', sans-serif;
+    padding-top: 40px;
+    line-height: 2em;
+    color: #282628;
+}
+
+/* MEDIA QUERIES FOR RESPONSIVT INDHOLD */
+
+/* Når skærmen er mindre end 992px bred, gælder disse regler for indholdet */
+
+@media screen and (max-width: 992px) {
+    
+    .viewport1_content {
+        flex-direction: column-reverse; /* sørger for at teksten kommer før billedet når de stables ovenpå hinanden */
+        margin-top: 0; /* ophæver styleregel om luft i toppen */
+        flex-wrap: wrap; /* når skærmen bliver for smal, må containeren gerne rykke indholdet ned på næste linje */
+    }
+
+    .viewport1_content .left img {
+        margin-top: 40px; /* der skal være lidt luft mellem billede og tekst i viewport 1, når de to stables ovenpå hinanden */
+    }
+
+    .viewport1_content .right {
+        text-align: center; /* titlen i viewport 1 skal centreres */
+        margin-left: 0px;
+    }
+
+    .viewport3_content {
+        flex-direction: column; /* ophæver at kasserne "column" med et billeder og en knap i ligger ved siden af hinanden, og sørger for at de i stedet stables ovenpå hinanden */
+        justify-content: center; justify-content: center; /* ophæver at der skal være luft mellem kasserne */
+        width: 100%; /* hver kolonne/kasse må nu fylde 100% af skærmen*/
+
+    }
+}
+
+
+
