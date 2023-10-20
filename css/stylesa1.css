@@ -1,0 +1,58 @@
+body {
+  background-color: #f4f1e8; 
+  margin-top: 20px; 
+}
+
+.content-container {
+  display: flex; /* content-container og de tilhørende elementer bliver flexible */
+  flex-direction: column; /*elementerne i content-container skal stable sig oven på hinanden */
+  align-items: center; /* alle elementer i content-container skal centreres lodret */
+  justify-content: center; /* alle elementer i content-container skal centreres vandret*/
+  margin-top: 160px; 
+  width: 100%;
+  color: #282628; /* alt teksten i content-container skal have denne farve */
+  text-align: left; /* alt teksten i content-container skal justeres til venstre */
+}
+
+.content-container h2 {
+  font-family: 'Lora', serif;
+  font-size: 3em; /* skriftstørrelsen skal være 3 gange så stor som h2 som standard er */
+  margin-bottom: 60px; /* alle h2 skal have 60px luft under sig ned til det næste element på siden */
+  width: 60%; /* teksten skal kun fylde 60% af skærmen */
+}
+
+.content-container h6 {
+  font-family: 'Mulish', sans-serif;
+  font-weight: 700; /* teksten skal være fed */
+  line-height: 2em; /* linjehøjden skal være 2 gange større end hvad den normalt er */
+  width: 60%;
+}
+
+.content-container p {
+  font-family: 'Mulish', sans-serif;
+  line-height: 2em;
+  width: 60%;
+  margin-bottom: 40px;
+}
+
+.unordered-list {
+  display: flex;
+  flex-direction: column; /* for at undgå, at punkter med korte sætninger sætter dig midt i siden, fordi de ikke kan udfylde hele content-container, bruger jeg i stedet flexbox og fortæller den, at items skal ligge som en kolonne, så de stabler sig ovenpå hinanden */
+  font-family: 'Mulish', sans-serif;
+  line-height: 2em;
+  width: 53%; /* punktopstillingerne skal kun fylde 53% af content-container */
+}
+
+.unordered-list li {
+  margin-top: 0;
+  margin-bottom: 40px; /* teksten i alle punkterne skal have luft under sig ned til det næste punkt */
+}
+
+#no-margin { 
+  margin-bottom: 0; /* teksten i et af punkterne skal ikke have noget luft under sig */
+}
+
+#no-bullet { 
+  font-style: italic; /* teksten i et af punkterne skal ikke have noget punkt foran sig, men være i cursiv*/
+  list-style: none;
+}

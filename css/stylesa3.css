@@ -1,0 +1,136 @@
+body {
+    background-color: #f4f1e8;
+    margin-top: 20px;
+}
+
+/*  STYLEREGLER FOR MAIN: INDHOLDET PÅ SIDEN */
+.content-container {
+    display: flex; /* content-container og de tilhørende elementer bliver flexible */
+    flex-direction: column; /* lementerne i content-container skal stable sig oven på hinanden */
+    align-items: center; /* alle elementer i content-container skal centreres lodret */
+    justify-content: center; /* alle elementer i content-container skal centreres vandret*/
+    margin-top: 160px; 
+    width: 100%;
+    color: #282628; /* alt teksten i content-container skal have denne farve */
+    text-align: left; /* alt teksten i content-container skal justeres til venstre */
+}
+  
+.content-container h2 {
+    font-family: 'Lora', serif;
+    font-size: 3em; /* skriftstørrelsen skal være 3 gange så stor som h2 som standarden er */
+    text-align: center; /* sørger for at overskriften står i midten og ikke til venstre, som resten af teksten */
+    margin-bottom: 60px;
+    width: 60%;
+}
+
+.wide-img {
+    width: 60%; /* billedet skal kun fylde 60% af skærmen */
+    height: auto; /* højden skal tilpasse sig automatisk, så billedet forbliver i de rigtige proportioner */
+    margin-bottom: 40px;
+}
+  
+.content-container h6 {
+    font-family: 'Mulish', sans-serif;
+    font-weight: 700; /* teksten skal være fed */
+    line-height: 2em; /* linjehøjden skal være 2 gange større end hvad den normalt er */
+    width: 60%; /* teksten skal kun fylde 60% af skærmen */
+}
+  
+.content-container p {
+    font-family: 'Mulish', sans-serif;
+    line-height: 2em; /* linjehøjden skal være 2 gange større end standarden */
+    width: 60%; /* teksten skal kun fylde 60% af skærmen */
+    margin-bottom: 40px;
+}
+  
+.ordered-list {
+    display: flex; 
+    flex-direction: column; /* for at undgå, at punkter med korte sætninger sætter dig midt i siden, fordi de ikke kan udfylde hele content-container, bruger jeg i stedet flexbox og fortæller den, at items skal ligge som en kolonne, så de stabler sig ovenpå hinanden */
+    font-family: 'Mulish', sans-serif;
+    line-height: 2em;
+    width: 53%; /* punktopstillingerne skal kun fylde 53% af content-container */
+}
+  
+.ordered-list li {
+    margin-bottom: 40px;
+}
+
+.responsive-images {
+    display: flex; 
+    align-items: center; /* sørger for at alle img.container fylder 60% i midten af skærmen lodret */
+    justify-content: center; /* sørger for at alle img.container fylder 60% i midten af skærmen vandret */
+    width: 100%; 
+}
+
+.img-container {
+    display: flex; 
+    justify-content: space-between; /* sørger for at der er luft imellem items, dvs. billederne */
+    width: 60%; /* billederne skal ikke fylde mere end 60% af siden */
+    flex-wrap: wrap; /* når skærmen bliver for smal, må containeren gerne rykke billederne ned på næste linje */
+}
+
+.img-container img {
+    width: auto; /* bredden skal tilpasse sig automatisk, så billedet forbliver i de rigtige proportioner */
+    max-height: 316px; /* billeder skal være lige høje og max 316px, for at der kan være luft imellem dem */
+    margin-bottom: 40px;
+}
+
+.img-container-domentop {
+    display: flex;
+    justify-content: space-between; /* sørger for at der er luft imellem items, dvs. billederne */
+    width: 60%; /* sørger for at billederne tilsammen ikke fylder mere end 60% af skærmen */
+    flex-wrap: wrap;
+}
+
+.img-container-domentop img {
+    width: auto; /* bredden skal tilpasse sig automatisk, så billedet forbliver i de rigtige proportioner */
+    max-height: 250px; /* billeder skal være lige høje og max 250px, for at der kan være luft imellem dem */
+    margin-bottom: 40px;
+}
+
+.img-container-domenbund {
+    display: flex;
+    justify-content: space-between; /* sørger for at der er luft imellem items, dvs. billederne */
+    width: 60%;
+    flex-wrap: wrap;
+}
+
+.img-container-domenbund img {
+    width: auto; /* bredden skal tilpasse sig automatisk, så billedet forbliver i de rigtige proportioner */
+    max-height: 261px; /* billeder skal være lige høje og max 216px, for at der kan være luft imellem dem */
+    margin-bottom: 40px;
+}
+
+.img-container-lynfabrikken {
+    display: flex;
+    justify-content: space-between;
+    width: 60%;
+    flex-wrap: wrap;
+}
+
+.img-container-lynfabrikken img {
+    width: auto; /* bredden skal tilpasse sig automatisk, så billedet forbliver i de rigtige proportioner */
+    max-height: 230px; /* billeder skal være lige høje og max 230px, for at der kan være luft imellem dem */
+    margin-bottom: 40px;
+}
+
+
+
+/* MEDIA QUERIES FOR RESPONSIVT INDHOLD */
+
+/* Når skærmen er mindre end 992px bred, gælder disse regler for indholdet */
+
+@media screen and (max-width: 992px) {
+    
+    .img-container, .img-container-domentop, .img-container-domenbund, .img-container-lynfabrikken {
+        justify-content: center; /* ophæver at der skal være luft mellem billederne */
+        align-items: center; /* sørger for at containeren fylder 60% i midten af skærmen */
+        flex-direction: column; /* ophæver at billederne ligger ved siden af hinanden, og sørger for at de i stedet stables ovenpå hinanden */
+    }
+
+    .img-container img, .img-container-domentop img, .img-container-domenbund img, .img-container-lynfabrikken img  {
+        width: 100%; /* alle billeder i artiklen skal fylde 100% af deres container i bredden */
+        height: auto; /* højden skal tilpasse sig automatisk, så billederne forbliver i d rigtige proportioner */
+        margin-bottom: 40px;
+    }
+}

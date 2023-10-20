@@ -1,0 +1,159 @@
+  
+/* STYLEREGLER FOR HEADER MED NAVIGATION */
+/* style-regler for navigationsbaren */
+.topnav, #myTopnav {
+    padding: 20px 20px 0 20px; 
+    background-color:#f4f1e8;
+    position: fixed; /* menuen skal altid følger med, når man scroller ned ad siden */
+    top: 0;
+    right: 0;
+    left: 0;
+    z-index: 10; /* navigationsbaren skal overlappe alle andre elementer på siden */
+}
+  
+/* style-regler for logoet/hjemknappen i navigationsmenuen */
+.topnav .logo-blue {
+    float: left;
+    display: block;
+    color: #598ca6;
+    text-align: center;
+    padding: 14px 20px;
+    text-decoration: none;
+    font-size: 1.2em;
+    font-family: 'Sen', sans-serif;
+    font-weight: 600;
+}
+
+/* style-regler for selve dropdown-menuens hovedindgange */
+.dropdown {
+    float: right; /* hovedindgangene skal sætte sig til højre */
+}
+  
+.dropdown .dropbtn {
+    border: none;
+    outline: none;
+    margin: 0;
+    padding: 14px 30px; /* padding rundt om hver hovedindgang */
+    background-color: inherit; 
+    font-family: 'Mulish', sans-serif;
+    font-size: 1.0em;
+    color: #598ca6;
+}
+
+/* style-regler for selve dropdown-menuens menupunkter*/
+.dropdown-content {
+    display: none; /* som standardtilstanden skal menupunkterne ikke vises */
+    position: absolute; /* når menuenpunkterne vises, skal de sætte sig ift. knapperne */
+    background-color: #f4f1e8;
+    min-width: 160px;
+    box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+    z-index: 10; /* når menupunkterne vises, skal de overlappe alle andre elementer på siden */
+}   
+  
+.dropdown-content a {
+    display: block; /* sørger for at menupunkterne vises som en kasse, hvor punkterne stabler sig ovenpå hinanden */
+    float: none; /* sørger for at menupunkterne udfylder hele kassen */
+    padding: 12px 20px;
+    text-decoration: none;
+    text-align: left; /* teksten skal stå til venstre i kassen */
+    font-family: 'Mulish', sans-serif;
+    font-size: 0.9em;
+    color: #598ca6;
+}
+  
+/* style-regler for menuen, når man hover hen over */
+.dropdown:hover .dropbtn {
+    border-style: solid; /* der vil komme en streg under, så man kan se, hvor man befinder sig i menuen */
+    border-color: #598ca6;
+    border-top: 2px; 
+    border-left: 2px;
+    border-right: 2px;
+}
+  
+.dropdown-content a:hover {
+    background-color: #598ca6; /* farverne på tekst og baggrund vil blive ombyttet på det menupunkt, man befinder sig på */
+    color: #f4f1e8;
+}
+  
+.dropdown:hover .dropdown-content {
+    display: block; /* ophæver at menupunkterne ikke vises, de vil komme frem, når man holder over den tilhørende indgang */
+}
+
+/* style-regler for ikonet ("burger-menuen") */
+.topnav .icon {
+    display: none; /* som standardtilstanden skal menu-ikonet ikke vises */
+    font-size: 3em; 
+    color: #598ca6;
+    text-decoration: none; /* når det vises, skal det ikke have nogen understregning */
+  }
+
+
+
+/* MEDIA QUERIES FOR EN RESPONSIV NAVIGATION */
+
+/* Når skærmen er mindre end 992px bred, gælder disse regler for navigationsmenuen */
+
+@media screen and (max-width: 992px) {
+    .topnav a, .dropdown .dropbtn {
+      display: none; /* alle links i "topnav" skal skjules */
+    }
+    .topnav .icon {
+      display: block; /* ophæver at ikonet ikke vises */
+      float: right; /* sørger for at ikonet sidder til højre, når det vises */
+    }
+}
+
+/* class="responsive" tilføjes til navigationens class="topnav" med JavaScript, når man klikker på ikonet */
+@media screen and (max-width: 992px) {
+
+    .topnav.responsive a.icon {
+      position: absolute; /* ikonet skal sidde det samme sted, ift. dropdown-content, uanset om menuen er åben eller ej */
+      right: 20px;
+      top: 14px;
+    }
+    .topnav.responsive a {
+      float: none; 
+      display: block; 
+      text-align: left; /* teksten skal stå i venstre side */
+    }
+
+    .topnav.responsive .dropdown {
+      float: none; /* ophæver at hovedindgangene skal sætte sig til højre */
+    }
+
+    .topnav.responsive .dropdown-content {
+      position: relative; 
+    }
+
+    .topnav.responsive .dropdown .dropbtn {
+      display: block; 
+      width: 100%; /* menupunkterne vil fylde hele skærmens bredde, når menuen bliver åbnet */
+      text-align: left; /* menupunkterne vil sidde i venstre side, når menuen bliver åbnet */
+    }
+}
+
+
+/*STYLEREGLER FOR FOOTER MED SOCIALE MEDIER*/
+footer {
+  display: flex;
+  width: 100%; /*footeren skal fylde hele skærmens bredde*/
+  height: 348px; /*footerens højde skal være 348px, så den fylder halvdelen af skærmens højde, når man scroller helt i bund*/
+  background-color: #598ca6; /* Footer background color */
+}
+
+.footer-content {
+  margin: 20px; /*footerens indhold skal have en kant på 20px*/
+}
+
+/* style af logoet i venstre hjørne */
+footer .logo-beige {
+  float: left; /*logoet skal sidde til venstre*/
+  color: #f4f1e8;
+  text-align: center;
+  padding: 14px 20px; /*logoet skal have have lidt luft omkring sig: 14px i top og bund og 20px til sidderne*/
+  text-decoration: none; /*fjerner understregning på logoet*/
+  font-size: 1.2em;
+  font-family: 'Sen', sans-serif;
+  font-weight: 600;
+}
+

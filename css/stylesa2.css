@@ -1,0 +1,107 @@
+body {
+    background-color: #f4f1e8;
+    margin-top: 20px;
+}
+ 
+/*  STYLEREGLER FOR MAIN: INDHOLDET PÅ SIDEN */
+.content-container {
+    display: flex; /* content-container og de tilhørende elementer bliver flexible */
+    flex-direction: column; /*elementerne i content-container skal stable sig oven på hinanden */
+    align-items: center; /* alle elementer i content-container skal centreres lodret */
+    justify-content: center; /* alle elementer i content-container skal centreres vandret*/
+    margin-top: 160px; 
+    width: 100%;
+    color: #282628;
+    text-align: left;
+}
+  
+.content-container h2 {
+    font-family: 'Lora', serif;
+    font-size: 3em; /* skriftstørrelsen skal være 3 gange så stor som h2 som standarden er */
+    text-align: center; /* sørger for at overskriften står i midten og ikke til venstre, som resten af teksten */
+    text-align: center;
+    margin-bottom: 60px;
+    width: 60%;
+}
+
+.wide-img {
+    width: 60%; /* billedet skal kun fylde 60% af skærmen */
+    height: auto; /* højden skal tilpasse sig automatisk, så billedet forbliver i de rigtige proportioner */
+    margin-bottom: 40px;
+}
+  
+.content-container h6 {
+    font-family: 'Mulish', sans-serif;
+    font-weight: 700; /* teksten skal være fed */
+    line-height: 2em; /* linjehøjden skal være 2 gange større end hvad den normalt er */
+    width: 60%; /* teksten skal kun fylde 60% af skærmen */
+}
+  
+.content-container p {
+    font-family: 'Mulish', sans-serif;
+    line-height: 2em;
+    width: 60%;
+    margin-bottom: 40px;
+}
+
+.collage {
+    width: 60%; /* collagerne skal udfylde 60% af skærmens bredde */
+    height: auto; /* højden skal tilpasse sig, så collagerne beholde de rigtige proportioner */
+}
+
+.content-container a:link {
+    color: #282628 /* sørger for at links under collagen har samme farve som resten af teksten, når man ikke har trykket på dem endnu */
+}
+
+.ordered-list {
+    display: flex; 
+    flex-direction: column; /* for at undgå, at punkter med korte sætninger sætter dig midt i siden, fordi de ikke kan udfylde hele content-container, bruger jeg i stedet flexbox og fortæller den, at items skal ligge som en kolonne, så de stabler sig ovenpå hinanden */
+    font-family: 'Mulish', sans-serif;
+    line-height: 2em;
+    width: 53%; /* punktopstillingerne skal kun fylde 53% af content-container */
+}
+  
+.ordered-list li {
+    margin-bottom: 40px;
+}
+
+.responsive-images {
+    display: flex; 
+    align-items: center; /* sørger for at alle img.container fylder 60% i midten af skærmen lodret */
+    justify-content: center; /* sørger for at alle img.container fylder 60% i midten af skærmen vandlet */
+    width: 100%; 
+}
+
+.img-container {
+    display: flex; 
+    justify-content: space-between; /* sørger for at der er luft imellem items, dvs. billederne */
+    width: 60%; /* billederne skal ikke fylde mere end 60% af siden */
+    flex-wrap: wrap; /* når skærmen bliver for smal, må containeren gerne rykke billederne */
+}
+
+.img-container img {
+    width: auto; /* bredden skal tilpasse sig automatisk, så billedet forbliver i de rigtige proportioner */
+    max-height: 290px; /* billeder skal være lige høje og max 290px, for at der kan være luft imellem dem */
+    margin-bottom: 40px;
+}
+
+
+
+/* MEDIA QUERIES FOR RESPONSIVT INDHOLD */
+
+/* Når skærmen er mindre end 992px bred, gælder disse regler for indholdet */
+
+@media screen and (max-width: 992px) {
+
+    .img-container {
+        justify-content: center; /* ophæver at der skal være luft mellem billederne */
+        align-items: center; /* sørger for at containeren fylder 60% i midten af skærmen */
+        flex-direction: column; /* ophæver at billederne ligger ved siden af hinanden, og sørger for at de i stedet stables ovenpå hinanden */
+    }
+
+    .img-container img {
+        width: 100%; /* begge billeder i artiklen skal fylde 100% af deres container i bredden */
+        height: auto; /* højden skal tilpasse sig automatisk, så billederne forbliver i d rigtige proportioner */
+        margin-bottom: 40px;
+    }
+}
